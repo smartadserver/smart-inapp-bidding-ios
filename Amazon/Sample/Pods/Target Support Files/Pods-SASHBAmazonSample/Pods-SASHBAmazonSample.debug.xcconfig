@@ -1,0 +1,9 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SmartAdServer-DisplaySDK"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/SmartAdServer-DisplaySDK/sdk"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/SmartAdServer-DisplaySDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"SmartAdServer" -framework "AVFoundation" -framework "Accelerate" -framework "AdSupport" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreMedia" -framework "CoreMotion" -framework "Foundation" -framework "MediaPlayer" -framework "QuartzCore" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -weak_framework "SafariServices" -weak_framework "SceneKit" -weak_framework "SpriteKit" -weak_framework "WebKit"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods

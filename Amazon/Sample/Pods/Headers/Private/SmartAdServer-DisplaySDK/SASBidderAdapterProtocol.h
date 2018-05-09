@@ -1,0 +1,1 @@
+../../../SmartAdServer-DisplaySDK/sdk/headers/SASBidderAdapterProtocol.h

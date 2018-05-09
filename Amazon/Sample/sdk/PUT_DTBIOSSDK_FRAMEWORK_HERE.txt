@@ -1,0 +1,1 @@
+To add Amazon to the sample project, put 'DTBiOSSDK.framework' in this directory.
