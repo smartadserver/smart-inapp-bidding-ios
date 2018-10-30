@@ -13,37 +13,13 @@
 
 /* Begin PBXFileReference section */
 		072E0D26B35AD5EE4248351E3887D3D3 /* Pods-SASHBAmazonSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SASHBAmazonSample.debug.xcconfig"; sourceTree = "<group>"; };
-		1264C2B1DF7DC9D55092411F78EB4B0C /* SASNativeAdPlacement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASNativeAdPlacement.h; path = sdk/headers/SASNativeAdPlacement.h; sourceTree = "<group>"; };
-		207FA535B63CC5AAA2A8C348740F8542 /* SASNativeAdMediaView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASNativeAdMediaView.h; path = sdk/headers/SASNativeAdMediaView.h; sourceTree = "<group>"; };
-		2E003C618D60660B3E8D973C4C28AD5C /* SASAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASAd.h; path = sdk/headers/SASAd.h; sourceTree = "<group>"; };
-		4CE6F0E1029BC03D848D36C81E44097D /* SASNativeAdDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASNativeAdDelegate.h; path = sdk/headers/SASNativeAdDelegate.h; sourceTree = "<group>"; };
-		4F8DDE634B1DBFADBD733143404E498B /* SASBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASBannerView.h; path = sdk/headers/SASBannerView.h; sourceTree = "<group>"; };
-		4FD7AEE0F059CE295F7DC03E078DA75D /* SASRewardedVideoDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASRewardedVideoDelegate.h; path = sdk/headers/SASRewardedVideoDelegate.h; sourceTree = "<group>"; };
-		58770155DA4BE70953F1E485489CC2D3 /* SASAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASAdView.h; path = sdk/headers/SASAdView.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		67CC06B4D74C05F437F09336601CA518 /* SASAdViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASAdViewDelegate.h; path = sdk/headers/SASAdViewDelegate.h; sourceTree = "<group>"; };
-		68DF8BAAD687D1DEE6772D3ED29B54B9 /* SASNativeAdMediaViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASNativeAdMediaViewDelegate.h; path = sdk/headers/SASNativeAdMediaViewDelegate.h; sourceTree = "<group>"; };
-		6C19C6DDC7AE5A9D941161F462B6A72A /* SASReward.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASReward.h; path = sdk/headers/SASReward.h; sourceTree = "<group>"; };
-		6EE7616C5D87F71AE8681ED7F71BEDEF /* SASInterstitialView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASInterstitialView.h; path = sdk/headers/SASInterstitialView.h; sourceTree = "<group>"; };
 		7180DF4B8637C91326D17F38605F4793 /* Pods-SASHBAmazonSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SASHBAmazonSample-dummy.m"; sourceTree = "<group>"; };
-		72853B4F7C776942087CFE783888E9E1 /* SASAdChoicesView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASAdChoicesView.h; path = sdk/headers/SASAdChoicesView.h; sourceTree = "<group>"; };
-		7E3D2956097B51956A823FDCDB2A57A2 /* SASMediationAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASMediationAd.h; path = sdk/headers/SASMediationAd.h; sourceTree = "<group>"; };
-		899F4627B3FA044CEE776181714CC325 /* SASNativeAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASNativeAd.h; path = sdk/headers/SASNativeAd.h; sourceTree = "<group>"; };
 		9211EA617B6C3C7BED4C464DA2EE78C9 /* Pods-SASHBAmazonSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SASHBAmazonSample-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A8119E2FDED8ACFA5D7258D4E5552755 /* SASVideoEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASVideoEvent.h; path = sdk/headers/SASVideoEvent.h; sourceTree = "<group>"; };
 		BA0330AE757BD6816786006810162518 /* Pods-SASHBAmazonSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SASHBAmazonSample.release.xcconfig"; sourceTree = "<group>"; };
 		C4203F20F9D4B383429BC7B26EDFF6B2 /* libPods-SASHBAmazonSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SASHBAmazonSample.a"; path = "libPods-SASHBAmazonSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C89F2EE7AD674E6944D1F3D2221E6A5B /* sas.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = sas.bundle; path = sdk/sas.bundle; sourceTree = "<group>"; };
-		D62DCF064AFFE37FDCC1598E57E3643C /* SASRewardedVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASRewardedVideo.h; path = sdk/headers/SASRewardedVideo.h; sourceTree = "<group>"; };
-		DA96F8E794761393D2AD906B3AAA7C7B /* SASNativeAdImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASNativeAdImage.h; path = sdk/headers/SASNativeAdImage.h; sourceTree = "<group>"; };
-		DE2ACB308B29E9B9D7A330519B9EA98E /* SASRewardedVideoPlacement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASRewardedVideoPlacement.h; path = sdk/headers/SASRewardedVideoPlacement.h; sourceTree = "<group>"; };
-		DE71D7A75E8793254847CB7BF54C8E23 /* SASBidderAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASBidderAdapter.h; path = sdk/headers/SASBidderAdapter.h; sourceTree = "<group>"; };
-		E1288E5D2AA46CF63B1C80D6A86A97AF /* SASNativeAdManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASNativeAdManager.h; path = sdk/headers/SASNativeAdManager.h; sourceTree = "<group>"; };
 		E54616444179F944C81D5A5E37F0EE9D /* Pods-SASHBAmazonSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SASHBAmazonSample-frameworks.sh"; sourceTree = "<group>"; };
-		E8938F2EEB93F3B3A877F8FC4735295A /* SASBidderAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASBidderAdapterProtocol.h; path = sdk/headers/SASBidderAdapterProtocol.h; sourceTree = "<group>"; };
-		EB036AE0711012A1E3BDF3964B92C30B /* libSmartAdServer.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSmartAdServer.a; path = sdk/libSmartAdServer.a; sourceTree = "<group>"; };
-		F32E242562C81BD2409AE9B833D91876 /* SASAdViewContainerCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASAdViewContainerCell.h; path = sdk/headers/SASAdViewContainerCell.h; sourceTree = "<group>"; };
 		F4846D3EA288BF8BF67941A332CD3338 /* Pods-SASHBAmazonSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SASHBAmazonSample-resources.sh"; sourceTree = "<group>"; };
 		FC63930292795B5A7C4A25994ED714E0 /* Pods-SASHBAmazonSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SASHBAmazonSample-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,46 +36,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12FEE843DC090C98FBF70E6ECC5BDA80 /* SmartAdServer-DisplaySDK */ = {
-			isa = PBXGroup;
-			children = (
-				2E003C618D60660B3E8D973C4C28AD5C /* SASAd.h */,
-				72853B4F7C776942087CFE783888E9E1 /* SASAdChoicesView.h */,
-				58770155DA4BE70953F1E485489CC2D3 /* SASAdView.h */,
-				F32E242562C81BD2409AE9B833D91876 /* SASAdViewContainerCell.h */,
-				67CC06B4D74C05F437F09336601CA518 /* SASAdViewDelegate.h */,
-				4F8DDE634B1DBFADBD733143404E498B /* SASBannerView.h */,
-				DE71D7A75E8793254847CB7BF54C8E23 /* SASBidderAdapter.h */,
-				E8938F2EEB93F3B3A877F8FC4735295A /* SASBidderAdapterProtocol.h */,
-				6EE7616C5D87F71AE8681ED7F71BEDEF /* SASInterstitialView.h */,
-				7E3D2956097B51956A823FDCDB2A57A2 /* SASMediationAd.h */,
-				899F4627B3FA044CEE776181714CC325 /* SASNativeAd.h */,
-				4CE6F0E1029BC03D848D36C81E44097D /* SASNativeAdDelegate.h */,
-				DA96F8E794761393D2AD906B3AAA7C7B /* SASNativeAdImage.h */,
-				E1288E5D2AA46CF63B1C80D6A86A97AF /* SASNativeAdManager.h */,
-				207FA535B63CC5AAA2A8C348740F8542 /* SASNativeAdMediaView.h */,
-				68DF8BAAD687D1DEE6772D3ED29B54B9 /* SASNativeAdMediaViewDelegate.h */,
-				1264C2B1DF7DC9D55092411F78EB4B0C /* SASNativeAdPlacement.h */,
-				6C19C6DDC7AE5A9D941161F462B6A72A /* SASReward.h */,
-				D62DCF064AFFE37FDCC1598E57E3643C /* SASRewardedVideo.h */,
-				4FD7AEE0F059CE295F7DC03E078DA75D /* SASRewardedVideoDelegate.h */,
-				DE2ACB308B29E9B9D7A330519B9EA98E /* SASRewardedVideoPlacement.h */,
-				A8119E2FDED8ACFA5D7258D4E5552755 /* SASVideoEvent.h */,
-				CEA066CC33DEA17FE567E1347F061CDD /* Frameworks */,
-				C6702F64EB6279B6BFD63980A2F62CEB /* Resources */,
-			);
-			name = "SmartAdServer-DisplaySDK";
-			path = "SmartAdServer-DisplaySDK";
-			sourceTree = "<group>";
-		};
-		13457F34D20E9D7250D64BFD5BEA769E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				12FEE843DC090C98FBF70E6ECC5BDA80 /* SmartAdServer-DisplaySDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3F8F9D270294BB77895792CC7B6B6034 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +49,6 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				13457F34D20E9D7250D64BFD5BEA769E /* Pods */,
 				D2EE231F174C07ADF3CC8F52FDB923F3 /* Products */,
 				3F8F9D270294BB77895792CC7B6B6034 /* Targets Support Files */,
 			);
@@ -125,14 +60,6 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C6702F64EB6279B6BFD63980A2F62CEB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C89F2EE7AD674E6944D1F3D2221E6A5B /* sas.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		CE18C61EB32AF3011E183A4BC2F8ABC2 /* Pods-SASHBAmazonSample */ = {
@@ -148,14 +75,6 @@
 			);
 			name = "Pods-SASHBAmazonSample";
 			path = "Target Support Files/Pods-SASHBAmazonSample";
-			sourceTree = "<group>";
-		};
-		CEA066CC33DEA17FE567E1347F061CDD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB036AE0711012A1E3BDF3964B92C30B /* libSmartAdServer.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D2EE231F174C07ADF3CC8F52FDB923F3 /* Products */ = {

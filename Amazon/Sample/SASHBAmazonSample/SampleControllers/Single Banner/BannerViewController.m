@@ -2,8 +2,8 @@
 //  BannerViewController.m
 //  SASHBAmazonSample
 //
-//  Created by Loïc GIRON DIT METAZ on 15/01/13.
-//  Copyright (c) 2013 Smart AdServer. All rights reserved.
+//  Created by Loïc GIRON DIT METAZ on 23/10/2018.
+//  Copyright (c) 2018 Smart AdServer. All rights reserved.
 //
 
 #import "BannerViewController.h"
@@ -89,7 +89,7 @@
     // If the third party SDK can load an ad, the response must be converted into a valid bidder adapter and then
     // provided to the Smart SDK so the Bidding competition can take place server side.
     // Here we generate an adapter from Amazon response
-    SASBidderAdapterAmazon *amazonAdapter = [self adapterForResponse:adResponse];
+    SASAmazonBidderAdapter *amazonAdapter = [self adapterForResponse:adResponse];
     
     // Load Smart ad and passing the amazon adapter so competition can occur server side
     [self loadSmartBanner:amazonAdapter];
@@ -107,7 +107,7 @@
 
 #pragma mark - Smart Ad Loading
 
-- (void)loadSmartBanner:(SASBidderAdapterAmazon *)bidderAdapter {
+- (void)loadSmartBanner:(SASAmazonBidderAdapter *)bidderAdapter {
     // Initialize Smart's banner
     self.banner = [[SASBannerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250) loader:SASLoaderActivityIndicatorStyleWhite];
     self.banner.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -116,52 +116,28 @@
     
     // Set correct size on the adapter for display to occur properly if Amazon wins the bidding competition
     if (bidderAdapter) {
-        bidderAdapter.adWidth = [NSString stringWithFormat:@"%0.fpx", _banner.frame.size.width];
-        bidderAdapter.adHeight = [NSString stringWithFormat:@"%0.fpx", _banner.frame.size.height];
+        bidderAdapter.adWidth = [NSString stringWithFormat:@"%0.fpx", self.banner.frame.size.width];
+        bidderAdapter.adHeight = [NSString stringWithFormat:@"%0.fpx", self.banner.frame.size.height];
     }
     
     // Load Smart's banner, passing the bidderAdapter that will forward the Amazon's creative price to Smart Ad Server
-    [_banner loadFormatId:15140 pageId:@"936820" master:YES target:nil bidderAdapter:bidderAdapter];
+    [self.banner loadFormatId:15140 pageId:@"936820" master:YES target:nil bidderAdapter:bidderAdapter];
 
     // The placement used here will has an insertion with a €0.50 CPM.
     // In this case, Amazon will win if the CPM of the returned creative if higher.
-    [self.view addSubview:_banner];
+    [self.view addSubview:self.banner];
 }
 
 
 #pragma mark - Bidder initialization
 
-- (SASBidderAdapterAmazon *)adapterForResponse:(DTBAdResponse *)response {
+- (SASAmazonBidderAdapter *)adapterForResponse:(DTBAdResponse *)response {
+    if (!response) {
+        return nil;
+    }
     
-    /////////////////////////////////////////////////////////
-    // IMPORTANT
-    /////////////////////////////////////////////////////////
-    // Create Amazon Price Points Matrix for the Adapter:
-    // This is a dictionary mapping a NSString (key, the pricepoint name) to a NSNumber (value, the CPM for this pricepoint in a given currency)
-    // This price point concept is specific to Amazon and to YOUR account.
-    // Ask your Amazon account manager for your pricepoints mapping: for each price point Amazon will give you a predicted CPM.
-    // From the AdResponse received from Amazon, the bidder adapter will be able to retrieve the appropriate CPM and pass it to the ad server as CPM for the competition.
-    // WARNING: Price point names are case sensitive AND vary from one publisher to another.
-    // WARNING: Do not use this matrix in production, it is only for demo !
-    // WARNING: for demo purpose we "faked" the matrix so that any pricepoint returned by Amazon will win against the programmed insertion on Smart (CPM of €0.5)
-    
-    NSDictionary *pricePointsMatrix = @{@"t300x250p1": @0.51,
-                                        @"t300x250p2": @0.52,
-                                        @"t300x250p3": @0.53,
-                                        @"t300x250p4": @0.54,
-                                        @"t300x250p5": @0.55,
-                                        @"t300x250p30": @0.8};
-    
-    // A real matrix will more look like this
-//    NSDictionary *pricePointsMatrix = @{@"t300x250p1": @0.01,
-//                                        @"t300x250p2": @0.02,
-//                                        @"t300x250p3": @0.03,
-//                                        @"t300x250p4": @0.04,
-//                                        @"t300x250p5": @0.05,
-//                                        @"t300x250p30": @0.30};
-    
-    // Initialize an Bidder adapter from the pricePointsMatrix, the response and the currency
-    SASBidderAdapterAmazon *adapter = [[SASBidderAdapterAmazon alloc] initWithAmazonAdResponse:response pricePointsMatrix:pricePointsMatrix currency:@"EUR"];
+    // Process DTB response
+    SASAmazonBidderAdapter *adapter = [[SASAmazonBidderAdapter alloc] initWithAmazonAdResponse:response];
     
     return adapter;
 }

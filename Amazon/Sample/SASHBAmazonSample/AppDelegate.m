@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MasterViewController.h"
 #import "SASAdView.h"
+#import "SASAmazonBidderConfigManager.h"
 #import <DTBiOSSDK/DTBiOSSDK.h>
 
 #define kSiteID 104808
@@ -30,6 +31,13 @@
 	// Enabling logging can be useful to get information if ads are not displayed properly.
 	// Don't forget to turn the logging OFF before submitting to the App Store.
 	[SASAdView setLoggingEnabled:YES];
+    
+    ////////////////////////////////////////////////////////
+    // SMART AMAZON BIDDER CONFIGURATION
+    ////////////////////////////////////////////////////////
+    
+    // Fetch JSON Amazon config (price points, creative tag and currency code) for this network
+    [[SASAmazonBidderConfigManager sharedInstance] configureWithURL:[NSURL URLWithString:@"https://mobile.smartadserver.com/ac?siteid=104808&pgid=1005469&fmtid=15140"]];
     
     ////////////////////////////////////////////////////////
     // AMAZON CONFIGURATION

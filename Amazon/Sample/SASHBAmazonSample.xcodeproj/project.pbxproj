@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E389D5C2099C15600AFF441 /* SASBidderAdapterAmazon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E389D5A2099C15500AFF441 /* SASBidderAdapterAmazon.m */; };
 		7E54E1F319A3A7A400651991 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E54E1F219A3A7A400651991 /* Images.xcassets */; };
+		7E5688F92099DBF900E4A97D /* libSmartAdServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5688E02099DBF800E4A97D /* libSmartAdServer.a */; };
+		7E5688FA2099DBF900E4A97D /* sas.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E5688F82099DBF800E4A97D /* sas.bundle */; };
 		7E5688FC2099DCDD00E4A97D /* DTBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5688FB2099DCDD00E4A97D /* DTBiOSSDK.framework */; };
 		7EE09C7216A5BB3500116F6D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE09C6A16A5BA9C00116F6D /* CoreMotion.framework */; };
 		7EE09C7316A5BB3500116F6D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE09C6816A5BA9600116F6D /* MediaPlayer.framework */; };
@@ -25,6 +26,8 @@
 		8500401A1BA0409B003AAD31 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850040191BA0409B003AAD31 /* MobileCoreServices.framework */; };
 		85112AB71AF11044000300CA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85112AB61AF11044000300CA /* AVFoundation.framework */; };
 		85112AB91AF11079000300CA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85112AB81AF11079000300CA /* CoreMedia.framework */; };
+		85BE7DE6217F51FC005F991C /* SASAmazonBidderConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE7DE2217F51FC005F991C /* SASAmazonBidderConfigManager.m */; };
+		85BE7DE7217F51FC005F991C /* SASAmazonBidderAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE7DE5217F51FC005F991C /* SASAmazonBidderAdapter.m */; };
 		89097E49B85BAA0ECF25CB11 /* libPods-SASHBAmazonSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B34B72EC4CE792769DCC32BE /* libPods-SASHBAmazonSample.a */; };
 		E96CD2F41D5CA83900AA4ED5 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96CD2F31D5CA83900AA4ED5 /* SafariServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E96CD2F61D5CA84400AA4ED5 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96CD2F51D5CA84400AA4ED5 /* SceneKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -42,9 +45,31 @@
 
 /* Begin PBXFileReference section */
 		14C5F91D47A353FBA2D226E1 /* Pods-SASHBAmazonSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SASHBAmazonSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample.debug.xcconfig"; sourceTree = "<group>"; };
-		7E389D5A2099C15500AFF441 /* SASBidderAdapterAmazon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SASBidderAdapterAmazon.m; path = ../../SASBidderAdapterAmazon.m; sourceTree = "<group>"; };
-		7E389D5B2099C15500AFF441 /* SASBidderAdapterAmazon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASBidderAdapterAmazon.h; path = ../../SASBidderAdapterAmazon.h; sourceTree = "<group>"; };
 		7E54E1F219A3A7A400651991 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7E5688E02099DBF800E4A97D /* libSmartAdServer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSmartAdServer.a; sourceTree = "<group>"; };
+		7E5688E22099DBF800E4A97D /* SASAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASAdView.h; sourceTree = "<group>"; };
+		7E5688E32099DBF800E4A97D /* SASRewardedVideoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASRewardedVideoDelegate.h; sourceTree = "<group>"; };
+		7E5688E42099DBF800E4A97D /* SASAdViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASAdViewDelegate.h; sourceTree = "<group>"; };
+		7E5688E52099DBF800E4A97D /* SASRewardedVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASRewardedVideo.h; sourceTree = "<group>"; };
+		7E5688E62099DBF800E4A97D /* SASInterstitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASInterstitialView.h; sourceTree = "<group>"; };
+		7E5688E72099DBF800E4A97D /* SASVideoEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASVideoEvent.h; sourceTree = "<group>"; };
+		7E5688E82099DBF800E4A97D /* SASNativeAdPlacement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASNativeAdPlacement.h; sourceTree = "<group>"; };
+		7E5688E92099DBF800E4A97D /* SASNativeAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASNativeAdManager.h; sourceTree = "<group>"; };
+		7E5688EA2099DBF800E4A97D /* SASBidderAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASBidderAdapter.h; sourceTree = "<group>"; };
+		7E5688EB2099DBF800E4A97D /* SASRewardedVideoPlacement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASRewardedVideoPlacement.h; sourceTree = "<group>"; };
+		7E5688EC2099DBF800E4A97D /* SASBidderAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASBidderAdapterProtocol.h; sourceTree = "<group>"; };
+		7E5688ED2099DBF800E4A97D /* SASMediationAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASMediationAd.h; sourceTree = "<group>"; };
+		7E5688EE2099DBF800E4A97D /* SASAdViewContainerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASAdViewContainerCell.h; sourceTree = "<group>"; };
+		7E5688EF2099DBF800E4A97D /* SASAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASAd.h; sourceTree = "<group>"; };
+		7E5688F02099DBF800E4A97D /* SASNativeAdMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASNativeAdMediaView.h; sourceTree = "<group>"; };
+		7E5688F12099DBF800E4A97D /* SASNativeAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASNativeAdDelegate.h; sourceTree = "<group>"; };
+		7E5688F22099DBF800E4A97D /* SASBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASBannerView.h; sourceTree = "<group>"; };
+		7E5688F32099DBF800E4A97D /* SASNativeAdImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASNativeAdImage.h; sourceTree = "<group>"; };
+		7E5688F42099DBF800E4A97D /* SASNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASNativeAd.h; sourceTree = "<group>"; };
+		7E5688F52099DBF800E4A97D /* SASAdChoicesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASAdChoicesView.h; sourceTree = "<group>"; };
+		7E5688F62099DBF800E4A97D /* SASReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASReward.h; sourceTree = "<group>"; };
+		7E5688F72099DBF800E4A97D /* SASNativeAdMediaViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASNativeAdMediaViewDelegate.h; sourceTree = "<group>"; };
+		7E5688F82099DBF800E4A97D /* sas.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = sas.bundle; sourceTree = "<group>"; };
 		7E5688FB2099DCDD00E4A97D /* DTBiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DTBiOSSDK.framework; path = sdk/DTBiOSSDK.framework; sourceTree = "<group>"; };
 		7E8CF04B209B0D2100CC060C /* SASHBAmazonSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SASHBAmazonSample-Info.plist"; sourceTree = "<group>"; };
 		7EE09C6216A5BA7E00116F6D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -67,6 +92,10 @@
 		850040191BA0409B003AAD31 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		85112AB61AF11044000300CA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		85112AB81AF11079000300CA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		85BE7DE2217F51FC005F991C /* SASAmazonBidderConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SASAmazonBidderConfigManager.m; path = ../../SASAmazonBidderConfigManager.m; sourceTree = "<group>"; };
+		85BE7DE3217F51FC005F991C /* SASAmazonBidderConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASAmazonBidderConfigManager.h; path = ../../SASAmazonBidderConfigManager.h; sourceTree = "<group>"; };
+		85BE7DE4217F51FC005F991C /* SASAmazonBidderAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASAmazonBidderAdapter.h; path = ../../SASAmazonBidderAdapter.h; sourceTree = "<group>"; };
+		85BE7DE5217F51FC005F991C /* SASAmazonBidderAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SASAmazonBidderAdapter.m; path = ../../SASAmazonBidderAdapter.m; sourceTree = "<group>"; };
 		B34B72EC4CE792769DCC32BE /* libPods-SASHBAmazonSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SASHBAmazonSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C7062563D776CFCBE2EBE3 /* Pods-SASHBAmazonSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SASHBAmazonSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample.release.xcconfig"; sourceTree = "<group>"; };
 		E96CD2F31D5CA83900AA4ED5 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -108,6 +137,7 @@
 				7EE09C7616A5BB3500116F6D /* QuartzCore.framework in Frameworks */,
 				7EF2374816A5623400FD4CF0 /* UIKit.framework in Frameworks */,
 				7EF2374A16A5623400FD4CF0 /* Foundation.framework in Frameworks */,
+				7E5688F92099DBF900E4A97D /* libSmartAdServer.a in Frameworks */,
 				7EF2374C16A5623400FD4CF0 /* CoreGraphics.framework in Frameworks */,
 				7E5688FC2099DCDD00E4A97D /* DTBiOSSDK.framework in Frameworks */,
 				89097E49B85BAA0ECF25CB11 /* libPods-SASHBAmazonSample.a in Frameworks */,
@@ -129,8 +159,10 @@
 		7E389D5D2099C16C00AFF441 /* AmazonBidderAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				7E389D5B2099C15500AFF441 /* SASBidderAdapterAmazon.h */,
-				7E389D5A2099C15500AFF441 /* SASBidderAdapterAmazon.m */,
+				85BE7DE4217F51FC005F991C /* SASAmazonBidderAdapter.h */,
+				85BE7DE5217F51FC005F991C /* SASAmazonBidderAdapter.m */,
+				85BE7DE3217F51FC005F991C /* SASAmazonBidderConfigManager.h */,
+				85BE7DE2217F51FC005F991C /* SASAmazonBidderConfigManager.m */,
 			);
 			name = AmazonBidderAdapter;
 			sourceTree = "<group>";
@@ -156,10 +188,50 @@
 			name = "Other Classes";
 			sourceTree = "<group>";
 		};
+		7E5688DF2099DBF800E4A97D /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				7E5688E02099DBF800E4A97D /* libSmartAdServer.a */,
+				7E5688E12099DBF800E4A97D /* headers */,
+				7E5688F82099DBF800E4A97D /* sas.bundle */,
+			);
+			path = sdk;
+			sourceTree = "<group>";
+		};
+		7E5688E12099DBF800E4A97D /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				7E5688E22099DBF800E4A97D /* SASAdView.h */,
+				7E5688E32099DBF800E4A97D /* SASRewardedVideoDelegate.h */,
+				7E5688E42099DBF800E4A97D /* SASAdViewDelegate.h */,
+				7E5688E52099DBF800E4A97D /* SASRewardedVideo.h */,
+				7E5688E62099DBF800E4A97D /* SASInterstitialView.h */,
+				7E5688E72099DBF800E4A97D /* SASVideoEvent.h */,
+				7E5688E82099DBF800E4A97D /* SASNativeAdPlacement.h */,
+				7E5688E92099DBF800E4A97D /* SASNativeAdManager.h */,
+				7E5688EB2099DBF800E4A97D /* SASRewardedVideoPlacement.h */,
+				7E5688EA2099DBF800E4A97D /* SASBidderAdapter.h */,
+				7E5688EC2099DBF800E4A97D /* SASBidderAdapterProtocol.h */,
+				7E5688ED2099DBF800E4A97D /* SASMediationAd.h */,
+				7E5688EE2099DBF800E4A97D /* SASAdViewContainerCell.h */,
+				7E5688EF2099DBF800E4A97D /* SASAd.h */,
+				7E5688F02099DBF800E4A97D /* SASNativeAdMediaView.h */,
+				7E5688F12099DBF800E4A97D /* SASNativeAdDelegate.h */,
+				7E5688F22099DBF800E4A97D /* SASBannerView.h */,
+				7E5688F32099DBF800E4A97D /* SASNativeAdImage.h */,
+				7E5688F42099DBF800E4A97D /* SASNativeAd.h */,
+				7E5688F52099DBF800E4A97D /* SASAdChoicesView.h */,
+				7E5688F62099DBF800E4A97D /* SASReward.h */,
+				7E5688F72099DBF800E4A97D /* SASNativeAdMediaViewDelegate.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
 		7EF2373816A5623400FD4CF0 = {
 			isa = PBXGroup;
 			children = (
 				7E5688FB2099DCDD00E4A97D /* DTBiOSSDK.framework */,
+				7E5688DF2099DBF800E4A97D /* sdk */,
 				7EF2374D16A5623400FD4CF0 /* SASHBAmazonSample */,
 				7EF2374616A5623400FD4CF0 /* Frameworks */,
 				7EF2374416A5623400FD4CF0 /* Products */,
@@ -260,7 +332,6 @@
 				7EF2373F16A5623400FD4CF0 /* Sources */,
 				7EF2374016A5623400FD4CF0 /* Frameworks */,
 				7EF2374116A5623400FD4CF0 /* Resources */,
-				81708E3CFF94AA59111DA551 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -313,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E98CD7781DA80E2A00A0A982 /* MasterViewController.xib in Resources */,
+				7E5688FA2099DBF900E4A97D /* sas.bundle in Resources */,
 				E96F87EC1DA7D6E900EF1994 /* LaunchScreen.xib in Resources */,
 				7E54E1F319A3A7A400651991 /* Images.xcassets in Resources */,
 				E96F88561DA7DAB900EF1994 /* BannerViewController.xib in Resources */,
@@ -323,24 +395,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		81708E3CFF94AA59111DA551 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample-resources.sh",
-				"${PODS_ROOT}/SmartAdServer-DisplaySDK/sdk/sas.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/sas.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		834ADF18DB7AE5C9F8BBD73E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,11 +420,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BE7DE6217F51FC005F991C /* SASAmazonBidderConfigManager.m in Sources */,
 				E96F87F41DA7D76200EF1994 /* MenuItem.m in Sources */,
 				7EF2375416A5623400FD4CF0 /* main.m in Sources */,
+				85BE7DE7217F51FC005F991C /* SASAmazonBidderAdapter.m in Sources */,
 				7EF2375816A5623400FD4CF0 /* AppDelegate.m in Sources */,
 				E96F87F21DA7D76200EF1994 /* MasterViewController.m in Sources */,
-				7E389D5C2099C15600AFF441 /* SASBidderAdapterAmazon.m in Sources */,
 				E96F883A1DA7DAB900EF1994 /* InterstitialViewController.m in Sources */,
 				E96F88551DA7DAB900EF1994 /* BannerViewController.m in Sources */,
 			);

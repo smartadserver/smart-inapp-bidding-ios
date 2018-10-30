@@ -1,16 +1,3 @@
-PODS:
-  - SmartAdServer-DisplaySDK (6.9)
-
-DEPENDENCIES:
-  - SmartAdServer-DisplaySDK
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - SmartAdServer-DisplaySDK
-
-SPEC CHECKSUMS:
-  SmartAdServer-DisplaySDK: 713a896a026ea9fa36e8bf3100e3bd27b24f11e9
-
-PODFILE CHECKSUM: 782c89f355501c67d07fc009b669b1ace7ecc9b5
+PODFILE CHECKSUM: e44f0b756122011528743abd49558004e6f7445e
 
 COCOAPODS: 1.5.0

@@ -2,14 +2,14 @@
 //  InterstitialViewController.m
 //  SASHBAmazonSample
 //
-//  Created by Loïc GIRON DIT METAZ on 16/01/13.
-//  Copyright (c) 2013 Smart AdServer. All rights reserved.
+//  Created by Loïc GIRON DIT METAZ on 23/10/2018.
+//  Copyright (c) 2018 Smart AdServer. All rights reserved.
 //
 
 #import "InterstitialViewController.h"
 
 /**
- * The purpose of this sample is to display a simple image interstitial.
+ * The purpose of this sample is to display a simple interstitial using in-app bidding with Amazon.
  */
 @implementation InterstitialViewController
 
@@ -78,7 +78,7 @@
 
 #pragma mark - Smart Ad Loading
 
-- (void)loadSmartInterstitial:(SASBidderAdapterAmazon *)bidderAdapter {
+- (void)loadSmartInterstitial:(SASAmazonBidderAdapter *)bidderAdapter {
     // Initialize Smart's interstitial
 	self.interstitial = [[SASInterstitialView alloc] initWithFrame:self.navigationController.view.bounds loader:SASLoaderActivityIndicatorStyleBlack];
     self.interstitial.delegate = self;
@@ -93,37 +93,13 @@
 
 #pragma mark - Bidder initialization
 
-- (SASBidderAdapterAmazon *)adapterForResponse:(DTBAdResponse *)response {
+- (SASAmazonBidderAdapter *)adapterForResponse:(DTBAdResponse *)response {
+    if (!response) {
+        return nil;
+    }
     
-    /////////////////////////////////////////////////////////
-    // IMPORTANT
-    /////////////////////////////////////////////////////////
-    // Create Amazon Price Points Matrix for the Adapter:
-    // This is a dictionary mapping a NSString (key, the pricepoint name) to a NSNumber (value, the CPM for this pricepoint in a given currency)
-    // This price point concept is specific to Amazon and to YOUR account.
-    // Ask your Amazon account manager for your pricepoints mapping: for each price point Amazon will give you a predicted CPM.
-    // From the AdResponse received from Amazon, the bidder adapter will be able to retrieve the appropriate CPM and pass it to the ad server as CPM for the competition.
-    // WARNING: Price point names are case sensitive AND vary from one publisher to another.
-    // WARNING: Do not use this matrix in production, it is only for demo !
-    // WARNING: for demo purpose we "faked" the matrix so that any pricepoint returned by Amazon will win against the programmed insertion on Smart (CPM of €0.5)
-    
-    NSDictionary *pricePointsMatrix = @{@"tInterstitialp1": @0.51,
-                                        @"tInterstitialp2": @0.52,
-                                        @"tInterstitialp3": @0.53,
-                                        @"tInterstitialp4": @0.54,
-                                        @"tInterstitialp5": @0.55,
-                                        @"tInterstitialp30": @0.8};
-    
-    // A real matrix will more look like this
-    //    NSDictionary *pricePointsMatrix = @{@"tInterstitialp1": @0.01,
-    //                                        @"tInterstitialp2": @0.02,
-    //                                        @"tInterstitialp3": @0.03,
-    //                                        @"tInterstitialp4": @0.04,
-    //                                        @"tInterstitialp5": @0.05,
-    //                                        @"tInterstitialp30": @0.30};
-    
-    // Initialize an Bidder adapter from the pricePointsMatrix, the response and the currency
-    SASBidderAdapterAmazon *adapter = [[SASBidderAdapterAmazon alloc] initWithAmazonAdResponse:response pricePointsMatrix:pricePointsMatrix currency:@"EUR"];
+    // Process DTB response
+    SASAmazonBidderAdapter *adapter = [[SASAmazonBidderAdapter alloc] initWithAmazonAdResponse:response];
     
     return adapter;
 }
