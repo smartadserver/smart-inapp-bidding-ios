@@ -15,13 +15,6 @@
 
 #pragma mark - Controller Lifecycle
 
-- (void)dealloc {
-    // Reset banner delegate and modalParentViewController
-	self.banner.delegate = nil;
-    self.banner.modalParentViewController = nil;
-}
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	
@@ -121,7 +114,7 @@
     }
     
     // Load Smart's banner, passing the bidderAdapter that will forward the Amazon's creative price to Smart Ad Server
-    [self.banner loadFormatId:15140 pageId:@"936820" master:YES target:nil bidderAdapter:bidderAdapter];
+    [self.banner loadWithPlacement:[SASAdPlacement adPlacementWithSiteId:104808 pageId:936820 formatId:15140] bidderAdapter:bidderAdapter];
 
     // The placement used here will has an insertion with a €0.50 CPM.
     // In this case, Amazon will win if the CPM of the returned creative if higher.
@@ -144,13 +137,12 @@
 
 #pragma mark - SASAdView Delegate
 
-- (void)adViewDidLoad:(SASAdView *)adView {
-	NSLog(@"Smart banner has been loaded");
+- (void)bannerViewDidLoad:(SASBannerView *)bannerView {
+    NSLog(@"Smart banner has been loaded");
 }
 
-
-- (void)adView:(SASAdView *)adView didFailToLoadWithError:(NSError *)error {
-	NSLog(@"Smart banner has failed to load with error: %@", [error description]);
+- (void)bannerView:(SASBannerView *)bannerView didFailToLoadWithError:(NSError *)error {
+    NSLog(@"Smart banner has failed to load with error: %@", [error description]);
 }
 
 @end

@@ -8,7 +8,7 @@ You will find in this repository the classes you need to connect _Amazon Publish
 
 The _Amazon bidder adapter_ is splitted into two different classes:
 
-- ```SASAmazonBidderAdapter```: this class is a [SASBidderAdapterProtocol](http://help.smartadserver.com/iOS/V6.9/Content/AppleDoc/Protocols/SASBidderAdapterProtocol.html) implementation and must be provided to the _Smart Display SDK_ when loading ads
+- ```SASAmazonBidderAdapter```: this class is a [SASBidderAdapterProtocol](http://documentation.smartadserver.com/displaySDK/ios/API/Protocols/SASBidderAdapterProtocol.html) implementation and must be provided to the _Smart Display SDK_ when loading ads
 - ```SASAmazonBidderConfigManager```: this singleton class must be called once at app startup to configure the Amazon bidder adapter
 
 To work properly the _Amazon bidder adapter_ must know several information: a **currency**, an **ad markup** and a **matrix of price points**. These information are retrieved automatically from an URL using the ```SASAmazonBidderConfigManager``` singleton class.
@@ -43,7 +43,7 @@ Request an Amazon ad using ```DTBAdLoader```, then create an instance of ```SASA
       if (adResponse != nil) {
         SASAmazonBidderAdapter *amazonBidderAdapter = [[SASAmazonBidderAdapter alloc] initWithAmazonAdResponse:response];
       }
-    
+
       // proceed to the Smart ad view loading…
     }
 
@@ -51,8 +51,12 @@ Please note that an _Amazon bidder adapter_ **can only be used once**.
 
 ### Make an ad call with the Amazon bidder adapter
 
-You can now make an ad call using the _Smart Display SDK_. Simply provide the adapter instance created earlier to Smart's AdView when loading it. If this instance is ```nil```, the _Smart Display SDK_ will make an ad call without in-app bidding so you will still get an ad.
+You can now make an ad call using the _Smart Display SDK_. Simply provide the adapter instance created earlier to Smart's ad view (or interstitial manager) when loading it. If this instance is ```nil```, the _Smart Display SDK_ will make an ad call without in-app bidding so you will still get an ad.
 
-    [smartAdView loadFormatId:<the format ID> pageId:@"<the page ID>" master:YES target:@"<the targetting string>" bidderAdapter:amazonBidderAdapter];
+    // for a banner
+    [bannerView loadWithPlacement:[SASAdPlacement adPlacementWithSiteId:<the site ID> pageId:<the page ID> formatId:<the format ID>] bidderAdapter:amazonBidderAdapter];
+
+    // for an interstitial
+    [interstitialManager loadWithBidderAdapter:bidderAdapter];
 
 At this point, the adapter and the _Smart Display SDK_ will take care of everything so the most valuable ad will be displayed automatically.

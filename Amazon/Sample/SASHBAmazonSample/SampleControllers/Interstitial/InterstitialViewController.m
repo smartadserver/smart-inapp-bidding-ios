@@ -15,13 +15,6 @@
 
 #pragma mark - Controller Lifecycle
 
-- (void)dealloc {
-    // Reset interstitial delegate and modalParentViewController
-    self.interstitial.delegate = nil;
-    self.interstitial.modalParentViewController = nil;
-}
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	
@@ -35,9 +28,9 @@
 #pragma mark - Interstitial Load Logic
 
 - (IBAction)loadPlacement:(id)sender {
-    self.interstitial.delegate = nil;
-    self.interstitial.modalParentViewController = nil;
-	
+    // Cleaning old interstitial manager
+    self.interstitialManager.delegate = nil;
+    
     // Perform a request to amazon first so that bidding competition can happen when asking Smart for an interstitial
 	[self loadAmazonInterstitial];
 }
@@ -80,15 +73,9 @@
 
 - (void)loadSmartInterstitial:(SASAmazonBidderAdapter *)bidderAdapter {
     // Initialize Smart's interstitial
-	self.interstitial = [[SASInterstitialView alloc] initWithFrame:self.navigationController.view.bounds loader:SASLoaderActivityIndicatorStyleBlack];
-    self.interstitial.delegate = self;
-    self.interstitial.modalParentViewController = self;
-    [self.interstitial loadFormatId:15140 pageId:@"936821" master:YES target:nil bidderAdapter:bidderAdapter];
-    
-    // The placement used here will always have an insertion with a €0.50 CPM.
-    // In this case, it will be easy to predict who will win using the Amazon ad response.	
-	[self.navigationController.view addSubview:self.interstitial];
-	[self setStatusBarHidden:YES];
+    SASAdPlacement *adPlacement = [SASAdPlacement adPlacementWithSiteId:104808 pageId:936821 formatId:15140];
+    self.interstitialManager = [[SASInterstitialManager alloc] initWithPlacement:adPlacement delegate:self];
+    [self.interstitialManager loadWithBidderAdapter:bidderAdapter];
 }
 
 #pragma mark - Bidder initialization
@@ -106,34 +93,35 @@
 
 #pragma mark - SASAdView delegate
 
-- (void)adViewDidLoad:(SASAdView *)adView {
-	NSLog(@"Interstitial has been loaded");
-	[self setStatusBarHidden:YES];
+- (void)interstitialManager:(SASInterstitialManager *)manager didLoadAd:(SASAd *)ad {
+    if (manager == self.interstitialManager) {
+        NSLog(@"Interstitial ad has been loaded");
+        [self.interstitialManager showFromViewController:self];
+    }
 }
 
-
-- (void)adView:(SASAdView *)adView didFailToLoadWithError:(NSError *)error {
-	NSLog(@"Interstitial has failed to load with error: %@", [error description]);
-	[self setStatusBarHidden:NO];
+- (void)interstitialManager:(SASInterstitialManager *)manager didFailToLoadWithError:(NSError *)error {
+    if (manager == self.interstitialManager) {
+        NSLog(@"Interstitial ad did fail to load: %@", error);
+    }
 }
 
-
-- (void)adViewDidDisappear:(SASAdView *)adView {
-	NSLog(@"Interstitial has disappeared");
-	[self setStatusBarHidden:NO];
+- (void)interstitialManager:(SASInterstitialManager *)manager didFailToShowWithError:(NSError *)error {
+    if (manager == self.interstitialManager) {
+        NSLog(@"Interstitial ad did fail to show: %@", error);
+    }
 }
 
-#pragma mark - iOS 7 status bar handling
-
-- (void)setStatusBarHidden:(BOOL)hidden {
-	self.shouldHideStatusBar = hidden;
-	if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
-		[self setNeedsStatusBarAppearanceUpdate];
-	}
+- (void)interstitialManager:(SASInterstitialManager *)manager didAppearFromViewController:(UIViewController *)viewController {
+    if (manager == self.interstitialManager) {
+        NSLog(@"Interstitial ad did appear");
+    }
 }
 
-- (BOOL)prefersStatusBarHidden {
-	return self.shouldHideStatusBar || [super prefersStatusBarHidden];
+- (void)interstitialManager:(SASInterstitialManager *)manager didDisappearFromViewController:(UIViewController *)viewController {
+    if (manager == self.interstitialManager) {
+        NSLog(@"Interstitial ad did disappear");
+    }
 }
 
 @end

@@ -1,0 +1,1 @@
+../../../../Smart-Display-SDK/SASDisplayKit.framework/Headers/SASMediationNativeAdAdapter.h

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SASBidderAdapter.h"
+#import <SASDisplayKit/SASDisplayKit.h>
 
 @class DTBAdResponse;
 

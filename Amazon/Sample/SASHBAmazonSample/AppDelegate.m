@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MasterViewController.h"
-#import "SASAdView.h"
+#import <SASDisplayKit/SASDisplayKit.h>
 #import "SASAmazonBidderConfigManager.h"
 #import <DTBiOSSDK/DTBiOSSDK.h>
 
@@ -26,11 +26,11 @@
     ////////////////////////////////////////////////////////
     
 	// The site ID and the base URL must be set before using the SDK, otherwise no ad will be retrieved.
-	[SASAdView setSiteID:kSiteID baseURL:kBaseURL];
+    [[SASConfiguration sharedInstance] configureWithSiteId:kSiteID baseURL:kBaseURL];
 	
 	// Enabling logging can be useful to get information if ads are not displayed properly.
 	// Don't forget to turn the logging OFF before submitting to the App Store.
-	[SASAdView setLoggingEnabled:YES];
+    [SASConfiguration sharedInstance].loggingEnabled = YES;
     
     ////////////////////////////////////////////////////////
     // SMART AMAZON BIDDER CONFIGURATION

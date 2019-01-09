@@ -1,0 +1,1 @@
+../../../../Smart-Core-SDK/SCSCoreKit.framework/Headers/SCSAxis3.h

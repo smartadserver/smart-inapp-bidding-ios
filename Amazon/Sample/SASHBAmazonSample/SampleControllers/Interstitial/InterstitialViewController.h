@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SASInterstitialView.h"
-#import "SASReward.h"
+#import <SASDisplayKit/SASDisplayKit.h>
+#import <SASDisplayKit/SASDisplayKit.h>
 #import "SASAmazonBidderAdapter.h"
 #import <DTBiOSSDK/DTBiOSSDK.h>
 
-@interface InterstitialViewController : UIViewController <SASAdViewDelegate, DTBAdCallback>
+@interface InterstitialViewController : UIViewController <SASInterstitialManagerDelegate, DTBAdCallback>
 
-@property (nonatomic, strong) SASInterstitialView *interstitial;
+@property (nonatomic, strong) SASInterstitialManager *interstitialManager;
 @property (nonatomic, assign) BOOL shouldHideStatusBar;
 
 @end

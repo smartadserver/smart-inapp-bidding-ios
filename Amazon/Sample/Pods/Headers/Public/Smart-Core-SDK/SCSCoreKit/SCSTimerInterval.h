@@ -1,0 +1,1 @@
+../../../../Smart-Core-SDK/SCSCoreKit.framework/Headers/SCSTimerInterval.h

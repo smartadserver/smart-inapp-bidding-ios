@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SASBannerView.h"
+#import <SASDisplayKit/SASDisplayKit.h>
 #import "SASAmazonBidderAdapter.h"
 #import <DTBiOSSDK/DTBiOSSDK.h>
 
-@interface BannerViewController : UIViewController <SASAdViewDelegate, DTBAdCallback>
+@interface BannerViewController : UIViewController <SASBannerViewDelegate, DTBAdCallback>
 
 @property (nonatomic, strong) SASBannerView *banner;
 
