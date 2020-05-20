@@ -10,8 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class SASIdentity;
-
 /**
  Hold the configuration of the Smart Display SDK.
  
@@ -32,6 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// The base URL used for ad calls.
 @property (nonatomic, readonly, nullable) NSString *baseURL;
+
+/// The manual base URL used for ad calls if defined, nil otherwise.
+///
+/// Setting this URL will override the base URL set for your network.
+@property (nonatomic, assign, nullable) NSString *manualBaseURL;
+
 
 #pragma mark - Configurable SDK properties
 
@@ -65,6 +69,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// YES if the configureWithSiteID method has been called, NO otherwise.
 @property (nonatomic, readonly, getter=isConfigured) BOOL configured;
 
+/// YES if the SDK is used as a Primary SDK, NO otherwise.
+@property (nonatomic, assign, getter=isPrimarySDK) BOOL primarySDK NS_SWIFT_NAME(primarySDK);
+
 /// The bundle for localized strings - See documentation for keys. By default the strings of the framework bundle will be used.
 @property (nonatomic, strong) NSBundle *stringsBundle;
 
@@ -76,12 +83,21 @@ NS_ASSUME_NONNULL_BEGIN
  @note This method MUST be called before performing any ad request and only once per application's lifecycle.
  Make sure you call this method in the application:didFinishLaunchingWithOptions: method of your application's delegate.
  
- If you don't know your siteId or baseURL, please contact your sales house which can retrieve them from its Smart account (sites &amp; pages).
+ If you don't know your siteId, please contact your sales house which can retrieve them from its Smart account (sites &amp; pages).
  
  @param siteId The site id used by your application.
- @param baseURL The base URL used for ad calls (it needs to be a valid URL without the ending slash).
  */
-- (void)configureWithSiteId:(NSInteger)siteId baseURL:(NSString *)baseURL NS_SWIFT_NAME(configure(siteId:baseURL:));
+- (void)configureWithSiteId:(NSInteger)siteId NS_SWIFT_NAME(configure(siteId:));
+
+/**
+ Configures the SDK for a given siteId. This will customize the SDK behavior for your site id.
+ 
+ @param siteId The site id used by your application.
+ @param baseURL The base URL , but this will have no effect anymore, use manualBaseURL property instead.
+ 
+ @deprecated This method is deprecated, use configureWithSiteId: instead. If you need to manually override the base URL, please use the manualBaseURL property.
+ */
+- (void)configureWithSiteId:(NSInteger)siteId baseURL:(NSString *)baseURL NS_SWIFT_NAME(configure(siteId:baseURL:)) __attribute((deprecated("use configureWithSiteId: instead")));
 
 #pragma mark - Live Preview
 

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7E54E1F319A3A7A400651991 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E54E1F219A3A7A400651991 /* Images.xcassets */; };
-		7E5688FC2099DCDD00E4A97D /* DTBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5688FB2099DCDD00E4A97D /* DTBiOSSDK.framework */; };
 		7EE09C7216A5BB3500116F6D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE09C6A16A5BA9C00116F6D /* CoreMotion.framework */; };
 		7EE09C7316A5BB3500116F6D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE09C6816A5BA9600116F6D /* MediaPlayer.framework */; };
 		7EE09C7416A5BB3500116F6D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE09C6616A5BA8D00116F6D /* SystemConfiguration.framework */; };
@@ -24,8 +23,6 @@
 		8500401A1BA0409B003AAD31 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850040191BA0409B003AAD31 /* MobileCoreServices.framework */; };
 		85112AB71AF11044000300CA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85112AB61AF11044000300CA /* AVFoundation.framework */; };
 		85112AB91AF11079000300CA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85112AB81AF11079000300CA /* CoreMedia.framework */; };
-		85BE7DE6217F51FC005F991C /* SASAmazonBidderConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE7DE2217F51FC005F991C /* SASAmazonBidderConfigManager.m */; };
-		85BE7DE7217F51FC005F991C /* SASAmazonBidderAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE7DE5217F51FC005F991C /* SASAmazonBidderAdapter.m */; };
 		89097E49B85BAA0ECF25CB11 /* libPods-SASHBAmazonSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B34B72EC4CE792769DCC32BE /* libPods-SASHBAmazonSample.a */; };
 		E96CD2F41D5CA83900AA4ED5 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96CD2F31D5CA83900AA4ED5 /* SafariServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E96CD2F61D5CA84400AA4ED5 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96CD2F51D5CA84400AA4ED5 /* SceneKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -38,8 +35,27 @@
 		E96F88551DA7DAB900EF1994 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96F88311DA7DAB900EF1994 /* BannerViewController.m */; };
 		E96F88561DA7DAB900EF1994 /* BannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96F88321DA7DAB900EF1994 /* BannerViewController.xib */; };
 		E98CD7781DA80E2A00A0A982 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98CD7771DA80E2A00A0A982 /* MasterViewController.xib */; };
+		E992C73D244EE4B400F3EB31 /* DTBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5688FB2099DCDD00E4A97D /* DTBiOSSDK.framework */; };
+		E992C73E244EE4B400F3EB31 /* DTBiOSSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5688FB2099DCDD00E4A97D /* DTBiOSSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E992C76C24558E8D00F3EB31 /* SASAmazonBannerBidderAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E992C76824558E8D00F3EB31 /* SASAmazonBannerBidderAdapter.m */; };
+		E992C76D24558E8D00F3EB31 /* SASAmazonBaseBidderAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E992C76924558E8D00F3EB31 /* SASAmazonBaseBidderAdapter.m */; };
+		E992C76E24558E8D00F3EB31 /* SASAmazonInterstitialBidderAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E992C76B24558E8D00F3EB31 /* SASAmazonInterstitialBidderAdapter.m */; };
 		E9DDC0F31CA444A6008F82EA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DDC0F21CA444A6008F82EA /* WebKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E992C73F244EE4B400F3EB31 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E992C73E244EE4B400F3EB31 /* DTBiOSSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		14C5F91D47A353FBA2D226E1 /* Pods-SASHBAmazonSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SASHBAmazonSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,10 +82,6 @@
 		850040191BA0409B003AAD31 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		85112AB61AF11044000300CA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		85112AB81AF11079000300CA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		85BE7DE2217F51FC005F991C /* SASAmazonBidderConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SASAmazonBidderConfigManager.m; path = ../../SASAmazonBidderConfigManager.m; sourceTree = "<group>"; };
-		85BE7DE3217F51FC005F991C /* SASAmazonBidderConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASAmazonBidderConfigManager.h; path = ../../SASAmazonBidderConfigManager.h; sourceTree = "<group>"; };
-		85BE7DE4217F51FC005F991C /* SASAmazonBidderAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASAmazonBidderAdapter.h; path = ../../SASAmazonBidderAdapter.h; sourceTree = "<group>"; };
-		85BE7DE5217F51FC005F991C /* SASAmazonBidderAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SASAmazonBidderAdapter.m; path = ../../SASAmazonBidderAdapter.m; sourceTree = "<group>"; };
 		B34B72EC4CE792769DCC32BE /* libPods-SASHBAmazonSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SASHBAmazonSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C7062563D776CFCBE2EBE3 /* Pods-SASHBAmazonSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SASHBAmazonSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample.release.xcconfig"; sourceTree = "<group>"; };
 		E96CD2F31D5CA83900AA4ED5 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -87,6 +99,12 @@
 		E96F88311DA7DAB900EF1994 /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		E96F88321DA7DAB900EF1994 /* BannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewController.xib; sourceTree = "<group>"; };
 		E98CD7771DA80E2A00A0A982 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MasterViewController.xib; path = Home/MasterViewController.xib; sourceTree = "<group>"; };
+		E992C76624558E8D00F3EB31 /* SASAmazonBaseBidderAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASAmazonBaseBidderAdapter.h; path = ../SASAmazonBaseBidderAdapter.h; sourceTree = "<group>"; };
+		E992C76724558E8D00F3EB31 /* SASAmazonBannerBidderAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASAmazonBannerBidderAdapter.h; path = ../SASAmazonBannerBidderAdapter.h; sourceTree = "<group>"; };
+		E992C76824558E8D00F3EB31 /* SASAmazonBannerBidderAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SASAmazonBannerBidderAdapter.m; path = ../SASAmazonBannerBidderAdapter.m; sourceTree = "<group>"; };
+		E992C76924558E8D00F3EB31 /* SASAmazonBaseBidderAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SASAmazonBaseBidderAdapter.m; path = ../SASAmazonBaseBidderAdapter.m; sourceTree = "<group>"; };
+		E992C76A24558E8D00F3EB31 /* SASAmazonInterstitialBidderAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASAmazonInterstitialBidderAdapter.h; path = ../SASAmazonInterstitialBidderAdapter.h; sourceTree = "<group>"; };
+		E992C76B24558E8D00F3EB31 /* SASAmazonInterstitialBidderAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SASAmazonInterstitialBidderAdapter.m; path = ../SASAmazonInterstitialBidderAdapter.m; sourceTree = "<group>"; };
 		E9DDC0F21CA444A6008F82EA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -112,8 +130,8 @@
 				7EF2374816A5623400FD4CF0 /* UIKit.framework in Frameworks */,
 				7EF2374A16A5623400FD4CF0 /* Foundation.framework in Frameworks */,
 				7EF2374C16A5623400FD4CF0 /* CoreGraphics.framework in Frameworks */,
-				7E5688FC2099DCDD00E4A97D /* DTBiOSSDK.framework in Frameworks */,
 				89097E49B85BAA0ECF25CB11 /* libPods-SASHBAmazonSample.a in Frameworks */,
+				E992C73D244EE4B400F3EB31 /* DTBiOSSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,17 +145,6 @@
 				D9C7062563D776CFCBE2EBE3 /* Pods-SASHBAmazonSample.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		7E389D5D2099C16C00AFF441 /* AmazonBidderAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				85BE7DE4217F51FC005F991C /* SASAmazonBidderAdapter.h */,
-				85BE7DE5217F51FC005F991C /* SASAmazonBidderAdapter.m */,
-				85BE7DE3217F51FC005F991C /* SASAmazonBidderConfigManager.h */,
-				85BE7DE2217F51FC005F991C /* SASAmazonBidderConfigManager.m */,
-			);
-			name = AmazonBidderAdapter;
 			sourceTree = "<group>";
 		};
 		7E549B9416A6B191003BF36A /* Sample Controllers */ = {
@@ -210,7 +217,7 @@
 		7EF2374D16A5623400FD4CF0 /* SASHBAmazonSample */ = {
 			isa = PBXGroup;
 			children = (
-				7E389D5D2099C16C00AFF441 /* AmazonBidderAdapter */,
+				E992C733244EE0E700F3EB31 /* SASAmazonAdapters */,
 				7EF2375616A5623400FD4CF0 /* AppDelegate.h */,
 				7EF2375716A5623400FD4CF0 /* AppDelegate.m */,
 				7E549B9416A6B191003BF36A /* Sample Controllers */,
@@ -254,6 +261,20 @@
 			path = "SampleControllers/Single Banner";
 			sourceTree = "<group>";
 		};
+		E992C733244EE0E700F3EB31 /* SASAmazonAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				E992C76724558E8D00F3EB31 /* SASAmazonBannerBidderAdapter.h */,
+				E992C76824558E8D00F3EB31 /* SASAmazonBannerBidderAdapter.m */,
+				E992C76624558E8D00F3EB31 /* SASAmazonBaseBidderAdapter.h */,
+				E992C76924558E8D00F3EB31 /* SASAmazonBaseBidderAdapter.m */,
+				E992C76A24558E8D00F3EB31 /* SASAmazonInterstitialBidderAdapter.h */,
+				E992C76B24558E8D00F3EB31 /* SASAmazonInterstitialBidderAdapter.m */,
+			);
+			name = SASAmazonAdapters;
+			path = ../../SASAmazonAdapters;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +287,7 @@
 				7EF2374016A5623400FD4CF0 /* Frameworks */,
 				7EF2374116A5623400FD4CF0 /* Resources */,
 				43733B071F3F2AD89473DE40 /* [CP] Embed Pods Frameworks */,
+				E992C73F244EE4B400F3EB31 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,6 +322,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7EF2373816A5623400FD4CF0;
@@ -333,23 +356,19 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample-frameworks.sh",
 				"${PODS_ROOT}/Smart-Core-SDK/SCSCoreKit.framework",
 				"${PODS_ROOT}/Smart-Display-SDK/SASDisplayKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SASDisplayKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SASHBAmazonSample/Pods-SASHBAmazonSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		834ADF18DB7AE5C9F8BBD73E /* [CP] Check Pods Manifest.lock */ = {
@@ -377,13 +396,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BE7DE6217F51FC005F991C /* SASAmazonBidderConfigManager.m in Sources */,
 				E96F87F41DA7D76200EF1994 /* MenuItem.m in Sources */,
 				7EF2375416A5623400FD4CF0 /* main.m in Sources */,
-				85BE7DE7217F51FC005F991C /* SASAmazonBidderAdapter.m in Sources */,
+				E992C76D24558E8D00F3EB31 /* SASAmazonBaseBidderAdapter.m in Sources */,
 				7EF2375816A5623400FD4CF0 /* AppDelegate.m in Sources */,
 				E96F87F21DA7D76200EF1994 /* MasterViewController.m in Sources */,
 				E96F883A1DA7DAB900EF1994 /* InterstitialViewController.m in Sources */,
+				E992C76C24558E8D00F3EB31 /* SASAmazonBannerBidderAdapter.m in Sources */,
+				E992C76E24558E8D00F3EB31 /* SASAmazonInterstitialBidderAdapter.m in Sources */,
 				E96F88551DA7DAB900EF1994 /* BannerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +504,7 @@
 			baseConfigurationReference = 14C5F91D47A353FBA2D226E1 /* Pods-SASHBAmazonSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -493,6 +514,7 @@
 				GCC_PREFIX_HEADER = "SASHBAmazonSample/SASHBAmazonSample-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SASHBAmazonSample/SASHBAmazonSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/sdk",
@@ -509,6 +531,7 @@
 			baseConfigurationReference = D9C7062563D776CFCBE2EBE3 /* Pods-SASHBAmazonSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -518,6 +541,7 @@
 				GCC_PREFIX_HEADER = "SASHBAmazonSample/SASHBAmazonSample-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SASHBAmazonSample/SASHBAmazonSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/sdk",

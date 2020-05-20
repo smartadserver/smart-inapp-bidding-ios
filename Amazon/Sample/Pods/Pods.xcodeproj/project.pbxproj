@@ -6,26 +6,75 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		1C8A4AED7560ADF9004DDF8D2D4D0AB7 /* Smart-Display-SDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 229CC60BFEBC2557F44A822AB1DFB473 /* Build configuration list for PBXAggregateTarget "Smart-Display-SDK" */;
+			buildPhases = (
+			);
+			dependencies = (
+				118DE7DA78B1F3BD6BF1425535B178A4 /* PBXTargetDependency */,
+			);
+			name = "Smart-Display-SDK";
+		};
+		5229D3DCAB881F587206D01F4898841C /* Smart-Core-SDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A9DF3035A8916889FE8CB523F6F68294 /* Build configuration list for PBXAggregateTarget "Smart-Core-SDK" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "Smart-Core-SDK";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		CC69702448BA39BCBE16C25195711BE8 /* Pods-SASHBAmazonSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180DF4B8637C91326D17F38605F4793 /* Pods-SASHBAmazonSample-dummy.m */; };
+		480CCE2E57E9B0E153DC666A91D3631C /* Pods-SASHBAmazonSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A1AD87C3FEB57392D552904F21086A /* Pods-SASHBAmazonSample-dummy.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		90B7673D29E04A68E1FF3D95A9F3CEBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5229D3DCAB881F587206D01F4898841C;
+			remoteInfo = "Smart-Core-SDK";
+		};
+		A25EA3D439FCD4C96765C285A396DF01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C8A4AED7560ADF9004DDF8D2D4D0AB7;
+			remoteInfo = "Smart-Display-SDK";
+		};
+		EC0560EFFEA4B5342D7E2145E69FAEF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5229D3DCAB881F587206D01F4898841C;
+			remoteInfo = "Smart-Core-SDK";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		072E0D26B35AD5EE4248351E3887D3D3 /* Pods-SASHBAmazonSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SASHBAmazonSample.debug.xcconfig"; sourceTree = "<group>"; };
-		2DDD6DE84560290310A74AE51610A509 /* SASDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SASDisplayKit.framework; sourceTree = "<group>"; };
-		7180DF4B8637C91326D17F38605F4793 /* Pods-SASHBAmazonSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SASHBAmazonSample-dummy.m"; sourceTree = "<group>"; };
-		9211EA617B6C3C7BED4C464DA2EE78C9 /* Pods-SASHBAmazonSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SASHBAmazonSample-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		955602446FA2B2C422B17853571AD3BA /* SCSCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSCoreKit.framework; sourceTree = "<group>"; };
-		BA0330AE757BD6816786006810162518 /* Pods-SASHBAmazonSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SASHBAmazonSample.release.xcconfig"; sourceTree = "<group>"; };
-		C4203F20F9D4B383429BC7B26EDFF6B2 /* libPods-SASHBAmazonSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SASHBAmazonSample.a"; path = "libPods-SASHBAmazonSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E54616444179F944C81D5A5E37F0EE9D /* Pods-SASHBAmazonSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SASHBAmazonSample-frameworks.sh"; sourceTree = "<group>"; };
-		F4846D3EA288BF8BF67941A332CD3338 /* Pods-SASHBAmazonSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SASHBAmazonSample-resources.sh"; sourceTree = "<group>"; };
-		FC63930292795B5A7C4A25994ED714E0 /* Pods-SASHBAmazonSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SASHBAmazonSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		17A4CB9CD8D029FC205D63C1E5AB8E0B /* SASDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SASDisplayKit.framework; sourceTree = "<group>"; };
+		1FD120F1D3CE17A94C8EE83902D79B85 /* libPods-SASHBAmazonSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SASHBAmazonSample.a"; path = "libPods-SASHBAmazonSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2689799D0C4B7A1C49EBCADD4FED0D62 /* Pods-SASHBAmazonSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SASHBAmazonSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		40A1AD87C3FEB57392D552904F21086A /* Pods-SASHBAmazonSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SASHBAmazonSample-dummy.m"; sourceTree = "<group>"; };
+		5DFB2F808D8DD0861D97770CE7D0AD23 /* Pods-SASHBAmazonSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SASHBAmazonSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		72BC5BF618B2667A91E41CE191A3F6ED /* Smart-Core-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Smart-Core-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		80895F5D8DB52E158D19D0FA483054B7 /* Smart-Core-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Smart-Core-SDK.release.xcconfig"; sourceTree = "<group>"; };
+		95D314A29E112334D5EA5AE2FE5E7A5F /* Pods-SASHBAmazonSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SASHBAmazonSample-frameworks.sh"; sourceTree = "<group>"; };
+		96CDA0CF3B77447DCCB253ABBC1C5EED /* Pods-SASHBAmazonSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SASHBAmazonSample.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F13331417B2152A656F33B1D462197F /* Smart-Display-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Smart-Display-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		B5C1EF7296A5A5BBE25EA2A9A3FB23FF /* Smart-Display-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Smart-Display-SDK.release.xcconfig"; sourceTree = "<group>"; };
+		D974AC9F0D55420E4371939759786E7F /* Pods-SASHBAmazonSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SASHBAmazonSample.debug.xcconfig"; sourceTree = "<group>"; };
+		FE1121A1A77F1E30E0B17A83F7149BFE /* SCSCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSCoreKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F8205023709A51FA4058B066880B60D3 /* Frameworks */ = {
+		9A83404D85EE0876DB9E3B7F3F4FD8EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,102 +84,123 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		1C54D91482CD92A78170C3BA3DE20389 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE1121A1A77F1E30E0B17A83F7149BFE /* SCSCoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		32AE90C55643FCAD271F92CFB80BB13C /* Frameworks */ = {
+		28C6DCF3FA4AA037FFF9D9C148621342 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				955602446FA2B2C422B17853571AD3BA /* SCSCoreKit.framework */,
+				17A4CB9CD8D029FC205D63C1E5AB8E0B /* SASDisplayKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3F8F9D270294BB77895792CC7B6B6034 /* Targets Support Files */ = {
+		33A660F427B3F303506A65B5B9078F34 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE18C61EB32AF3011E183A4BC2F8ABC2 /* Pods-SASHBAmazonSample */,
+				7C71E92708C4B18F325052C5440F73FA /* Pods-SASHBAmazonSample */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		4945B665E3238363128956EE50660056 /* Pods */ = {
+		70DB4E9221F8445800E5D9E5535144E0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				751FC327769614A05F45C73E0E87D946 /* Smart-Core-SDK */,
-				EED9ECED526347E482A509C0E555CD24 /* Smart-Display-SDK */,
+				9F13331417B2152A656F33B1D462197F /* Smart-Display-SDK.debug.xcconfig */,
+				B5C1EF7296A5A5BBE25EA2A9A3FB23FF /* Smart-Display-SDK.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/Smart-Display-SDK";
 			sourceTree = "<group>";
 		};
-		751FC327769614A05F45C73E0E87D946 /* Smart-Core-SDK */ = {
+		7C71E92708C4B18F325052C5440F73FA /* Pods-SASHBAmazonSample */ = {
 			isa = PBXGroup;
 			children = (
-				32AE90C55643FCAD271F92CFB80BB13C /* Frameworks */,
-			);
-			name = "Smart-Core-SDK";
-			path = "Smart-Core-SDK";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				4945B665E3238363128956EE50660056 /* Pods */,
-				D2EE231F174C07ADF3CC8F52FDB923F3 /* Products */,
-				3F8F9D270294BB77895792CC7B6B6034 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		CE18C61EB32AF3011E183A4BC2F8ABC2 /* Pods-SASHBAmazonSample */ = {
-			isa = PBXGroup;
-			children = (
-				FC63930292795B5A7C4A25994ED714E0 /* Pods-SASHBAmazonSample-acknowledgements.markdown */,
-				9211EA617B6C3C7BED4C464DA2EE78C9 /* Pods-SASHBAmazonSample-acknowledgements.plist */,
-				7180DF4B8637C91326D17F38605F4793 /* Pods-SASHBAmazonSample-dummy.m */,
-				E54616444179F944C81D5A5E37F0EE9D /* Pods-SASHBAmazonSample-frameworks.sh */,
-				F4846D3EA288BF8BF67941A332CD3338 /* Pods-SASHBAmazonSample-resources.sh */,
-				072E0D26B35AD5EE4248351E3887D3D3 /* Pods-SASHBAmazonSample.debug.xcconfig */,
-				BA0330AE757BD6816786006810162518 /* Pods-SASHBAmazonSample.release.xcconfig */,
+				2689799D0C4B7A1C49EBCADD4FED0D62 /* Pods-SASHBAmazonSample-acknowledgements.markdown */,
+				5DFB2F808D8DD0861D97770CE7D0AD23 /* Pods-SASHBAmazonSample-acknowledgements.plist */,
+				40A1AD87C3FEB57392D552904F21086A /* Pods-SASHBAmazonSample-dummy.m */,
+				95D314A29E112334D5EA5AE2FE5E7A5F /* Pods-SASHBAmazonSample-frameworks.sh */,
+				D974AC9F0D55420E4371939759786E7F /* Pods-SASHBAmazonSample.debug.xcconfig */,
+				96CDA0CF3B77447DCCB253ABBC1C5EED /* Pods-SASHBAmazonSample.release.xcconfig */,
 			);
 			name = "Pods-SASHBAmazonSample";
 			path = "Target Support Files/Pods-SASHBAmazonSample";
 			sourceTree = "<group>";
 		};
-		D2EE231F174C07ADF3CC8F52FDB923F3 /* Products */ = {
+		89E1D52FF698E5281AA7C204BBECA80C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C4203F20F9D4B383429BC7B26EDFF6B2 /* libPods-SASHBAmazonSample.a */,
+				959010AAD8C84CBC85FC12248A5220A1 /* Smart-Core-SDK */,
+				90235B31D2E394494644560C266C7450 /* Smart-Display-SDK */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		D9FD439FBD4CFC7D4850B383A47677D3 /* Frameworks */ = {
+		8E421456373394C174B4EDE1876A7ED4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2DDD6DE84560290310A74AE51610A509 /* SASDisplayKit.framework */,
+				72BC5BF618B2667A91E41CE191A3F6ED /* Smart-Core-SDK.debug.xcconfig */,
+				80895F5D8DB52E158D19D0FA483054B7 /* Smart-Core-SDK.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/Smart-Core-SDK";
 			sourceTree = "<group>";
 		};
-		EED9ECED526347E482A509C0E555CD24 /* Smart-Display-SDK */ = {
+		90235B31D2E394494644560C266C7450 /* Smart-Display-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				D9FD439FBD4CFC7D4850B383A47677D3 /* Frameworks */,
+				28C6DCF3FA4AA037FFF9D9C148621342 /* Frameworks */,
+				70DB4E9221F8445800E5D9E5535144E0 /* Support Files */,
 			);
 			name = "Smart-Display-SDK";
 			path = "Smart-Display-SDK";
 			sourceTree = "<group>";
 		};
+		959010AAD8C84CBC85FC12248A5220A1 /* Smart-Core-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				1C54D91482CD92A78170C3BA3DE20389 /* Frameworks */,
+				8E421456373394C174B4EDE1876A7ED4 /* Support Files */,
+			);
+			name = "Smart-Core-SDK";
+			path = "Smart-Core-SDK";
+			sourceTree = "<group>";
+		};
+		CA231711D7185E7D59302BB5491662B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FD120F1D3CE17A94C8EE83902D79B85 /* libPods-SASHBAmazonSample.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				89E1D52FF698E5281AA7C204BBECA80C /* Pods */,
+				CA231711D7185E7D59302BB5491662B5 /* Products */,
+				33A660F427B3F303506A65B5B9078F34 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		36534707BAE37C51E36D396C0088EE09 /* Headers */ = {
+		ECC6E805611E85CA58083F0544ABFB24 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -140,62 +210,151 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7BA936DDAE28DA8808AAABD3082D078D /* Pods-SASHBAmazonSample */ = {
+		0F3833DB3EE8615471E52A3D9AD1844A /* Pods-SASHBAmazonSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65C8DD2A3D486C9B9C4D0CB49D8BF15D /* Build configuration list for PBXNativeTarget "Pods-SASHBAmazonSample" */;
+			buildConfigurationList = 646ADB11952FD86DFBF66B3966D64F34 /* Build configuration list for PBXNativeTarget "Pods-SASHBAmazonSample" */;
 			buildPhases = (
-				36534707BAE37C51E36D396C0088EE09 /* Headers */,
-				34B65BD4E50EC986D1D1FED8E15EBCB7 /* Sources */,
-				F8205023709A51FA4058B066880B60D3 /* Frameworks */,
+				ECC6E805611E85CA58083F0544ABFB24 /* Headers */,
+				02FFFC1E366EB439AEF7F8ECCFEB9035 /* Sources */,
+				9A83404D85EE0876DB9E3B7F3F4FD8EF /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4EEC9A1A25007A542794C84828650DFA /* PBXTargetDependency */,
+				E991F782DCEA8071168CFE36270223A8 /* PBXTargetDependency */,
 			);
 			name = "Pods-SASHBAmazonSample";
 			productName = "Pods-SASHBAmazonSample";
-			productReference = C4203F20F9D4B383429BC7B26EDFF6B2 /* libPods-SASHBAmazonSample.a */;
+			productReference = 1FD120F1D3CE17A94C8EE83902D79B85 /* libPods-SASHBAmazonSample.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D2EE231F174C07ADF3CC8F52FDB923F3 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CA231711D7185E7D59302BB5491662B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7BA936DDAE28DA8808AAABD3082D078D /* Pods-SASHBAmazonSample */,
+				0F3833DB3EE8615471E52A3D9AD1844A /* Pods-SASHBAmazonSample */,
+				5229D3DCAB881F587206D01F4898841C /* Smart-Core-SDK */,
+				1C8A4AED7560ADF9004DDF8D2D4D0AB7 /* Smart-Display-SDK */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		34B65BD4E50EC986D1D1FED8E15EBCB7 /* Sources */ = {
+		02FFFC1E366EB439AEF7F8ECCFEB9035 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC69702448BA39BCBE16C25195711BE8 /* Pods-SASHBAmazonSample-dummy.m in Sources */,
+				480CCE2E57E9B0E153DC666A91D3631C /* Pods-SASHBAmazonSample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		118DE7DA78B1F3BD6BF1425535B178A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Smart-Core-SDK";
+			target = 5229D3DCAB881F587206D01F4898841C /* Smart-Core-SDK */;
+			targetProxy = 90B7673D29E04A68E1FF3D95A9F3CEBD /* PBXContainerItemProxy */;
+		};
+		4EEC9A1A25007A542794C84828650DFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Smart-Core-SDK";
+			target = 5229D3DCAB881F587206D01F4898841C /* Smart-Core-SDK */;
+			targetProxy = EC0560EFFEA4B5342D7E2145E69FAEF9 /* PBXContainerItemProxy */;
+		};
+		E991F782DCEA8071168CFE36270223A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Smart-Display-SDK";
+			target = 1C8A4AED7560ADF9004DDF8D2D4D0AB7 /* Smart-Display-SDK */;
+			targetProxy = A25EA3D439FCD4C96765C285A396DF01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		85B95B1234E227C814CCC2C7902D0916 /* Release */ = {
+		0F9679097D1BEFCDF159B3019B783A38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96CDA0CF3B77447DCCB253ABBC1C5EED /* Pods-SASHBAmazonSample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BC1861BD1EA2FB3BB074D5DFB2C71D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72BC5BF618B2667A91E41CE191A3F6ED /* Smart-Core-SDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E61D780585FC9638D83564D3108FB5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80895F5D8DB52E158D19D0FA483054B7 /* Smart-Core-SDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47410A15C39477E24374BBE2C85FFF26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5C1EF7296A5A5BBE25EA2A9A3FB23FF /* Smart-Display-SDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -227,8 +386,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -252,33 +409,12 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		944068FD3EFEF5B8864CB3F053328333 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 072E0D26B35AD5EE4248351E3887D3D3 /* Pods-SASHBAmazonSample.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A73625DEBD810B78234FA1958C191C8C /* Debug */ = {
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -310,8 +446,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -339,14 +473,14 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		F358D7DA98A4757EC2D391B8E281A976 /* Release */ = {
+		F0AC84F867830BE4E0A07014BF4BFE97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA0330AE757BD6816786006810162518 /* Pods-SASHBAmazonSample.release.xcconfig */;
+			baseConfigurationReference = D974AC9F0D55420E4371939759786E7F /* Pods-SASHBAmazonSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -362,32 +496,62 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
+		};
+		F2C3D397F6B7B76A6BD9AD0CFD108CB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F13331417B2152A656F33B1D462197F /* Smart-Display-SDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		229CC60BFEBC2557F44A822AB1DFB473 /* Build configuration list for PBXAggregateTarget "Smart-Display-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A73625DEBD810B78234FA1958C191C8C /* Debug */,
-				85B95B1234E227C814CCC2C7902D0916 /* Release */,
+				F2C3D397F6B7B76A6BD9AD0CFD108CB5 /* Debug */,
+				47410A15C39477E24374BBE2C85FFF26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65C8DD2A3D486C9B9C4D0CB49D8BF15D /* Build configuration list for PBXNativeTarget "Pods-SASHBAmazonSample" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				944068FD3EFEF5B8864CB3F053328333 /* Debug */,
-				F358D7DA98A4757EC2D391B8E281A976 /* Release */,
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		646ADB11952FD86DFBF66B3966D64F34 /* Build configuration list for PBXNativeTarget "Pods-SASHBAmazonSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0AC84F867830BE4E0A07014BF4BFE97 /* Debug */,
+				0F9679097D1BEFCDF159B3019B783A38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9DF3035A8916889FE8CB523F6F68294 /* Build configuration list for PBXAggregateTarget "Smart-Core-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BC1861BD1EA2FB3BB074D5DFB2C71D2 /* Debug */,
+				3E61D780585FC9638D83564D3108FB5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

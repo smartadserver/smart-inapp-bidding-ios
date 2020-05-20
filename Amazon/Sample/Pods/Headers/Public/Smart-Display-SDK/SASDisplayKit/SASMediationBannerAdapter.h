@@ -1,1 +1,0 @@
-../../../../Smart-Display-SDK/SASDisplayKit.framework/Headers/SASMediationBannerAdapter.h

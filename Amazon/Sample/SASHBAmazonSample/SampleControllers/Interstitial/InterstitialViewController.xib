@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterstitialViewController">
             <connections>
+                <outlet property="showButton" destination="qb2-Px-b9y" id="QfX-9p-6Yu"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -26,11 +24,11 @@
                         <constraint firstAttribute="height" constant="28" id="38"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica-Oblique" family="Helvetica" pointSize="10"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zp5-Mw-Qkn">
-                    <rect key="frame" x="117" y="313" width="140" height="40"/>
+                    <rect key="frame" x="117.5" y="313.5" width="140" height="40"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <accessibility key="accessibilityConfiguration" label="loadAd"/>
                     <constraints>
@@ -44,14 +42,31 @@
                         <action selector="loadPlacement:" destination="-1" eventType="touchUpInside" id="p26-Ng-DJ3"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Click on 'Load Ad' to open an interstitial" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                    <rect key="frame" x="20" y="100" width="335" height="41"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                    <rect key="frame" x="20" y="80" width="335" height="61"/>
+                    <string key="text">Click on 'Load Ad' to load an interstitial.
+Click on 'Show ad' to display the interstitial. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qb2-Px-b9y">
+                    <rect key="frame" x="117.5" y="383" width="140" height="40"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <accessibility key="accessibilityConfiguration" label="loadAd"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="eHa-Ii-Pu2"/>
+                        <constraint firstAttribute="height" constant="40" id="hNZ-uO-MVb"/>
+                    </constraints>
+                    <state key="normal" title="SHOW AD">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showInterstitial:" destination="-1" eventType="touchUpInside" id="aHC-sf-mMe"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="37" secondAttribute="bottom" constant="20" symbolic="YES" id="42"/>
                 <constraint firstItem="37" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="43"/>
@@ -59,9 +74,12 @@
                 <constraint firstAttribute="trailing" secondItem="11" secondAttribute="trailing" constant="20" id="4RT-eG-e0F"/>
                 <constraint firstItem="11" firstAttribute="top" secondItem="1" secondAttribute="topMargin" constant="80" id="B10-ZQ-xlo"/>
                 <constraint firstItem="11" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="TSd-9D-Uau"/>
+                <constraint firstItem="qb2-Px-b9y" firstAttribute="top" secondItem="Zp5-Mw-Qkn" secondAttribute="bottom" constant="29.5" id="Wf1-yS-lWu"/>
                 <constraint firstItem="Zp5-Mw-Qkn" firstAttribute="centerX" secondItem="37" secondAttribute="centerX" id="fRi-bc-IJA"/>
+                <constraint firstItem="qb2-Px-b9y" firstAttribute="centerX" secondItem="Zp5-Mw-Qkn" secondAttribute="centerX" id="oPb-Pf-BmH"/>
                 <constraint firstItem="Zp5-Mw-Qkn" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" id="yWt-x5-mlh"/>
             </constraints>
+            <point key="canvasLocation" x="132" y="153"/>
         </view>
     </objects>
 </document>

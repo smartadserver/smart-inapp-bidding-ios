@@ -23,9 +23,6 @@
     
     if (self) {
 		self.title = @"Amazon HB Sample";
-        if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
-            self.edgesForExtendedLayout = UIRectEdgeNone;
-        }
 		[self initializeItems];
     }
     

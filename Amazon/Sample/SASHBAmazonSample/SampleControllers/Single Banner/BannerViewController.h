@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <SASDisplayKit/SASDisplayKit.h>
-#import "SASAmazonBidderAdapter.h"
 #import <DTBiOSSDK/DTBiOSSDK.h>
 
 @interface BannerViewController : UIViewController <SASBannerViewDelegate, DTBAdCallback>

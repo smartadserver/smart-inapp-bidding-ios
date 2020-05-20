@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "SCSRemoteConfigManagerDelegate.h"
+#import "SCSRemoteConfigurationErrorRemoteLogger.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -43,11 +44,23 @@ NS_ASSUME_NONNULL_BEGIN
 /// The baseURL for ad calls.
 @property (nonatomic, readonly) NSURL *baseURL;
 
+/// The manualBaseURL to force ad calls using it.
+@property (nullable, nonatomic, strong) NSURL *manualBaseURL;
+
 /// The siteID associated with this configuration.
 @property (nonatomic, readonly) NSUInteger siteID;
 
 /// The networkID associated with this configuration.
 @property (nonatomic, readonly) NSUInteger networkID;
+
+/// The parameters to add in the JSON post of each ad call.
+@property (nonatomic, readonly, strong) NSDictionary<NSString *, id> *adCallAdditionalParametersPOST;
+
+/// The parameters to add in the URL of each ad call.
+@property (nonatomic, readonly, strong) NSDictionary<NSString *, NSString *> *adCallAdditionalParametersGET;
+
+/// YES if the SDK using this SCSConfiguration instance is deprecated and should be upgraded, NO otherwise.
+@property (nonatomic, readonly) BOOL isDeprecated;
 
 /**
  Public Initializer
@@ -68,6 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Return the current device identity.
+ 
  @return the current device identity.
  */
 - (SCSIdentity *)deviceIdentity;
@@ -87,6 +101,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Return if the SDK has been properly configured by calling.
+ 
  @return whether or not the SDK has been properly configured.
  */
 - (BOOL)isConfigured;
@@ -104,6 +119,25 @@ NS_ASSUME_NONNULL_BEGIN
  @param smartDict The Smart AdServer config dictionary.
  */
 - (void)configureWithSmartDictionary:(NSDictionary *)smartDict;
+
+/**
+ Configure the SCSConfiguration instance using dictionary fetched from the remote config manager.
+ 
+ @param smartDict The Smart AdServer config dictionary.
+ @param logger The logger to use in case of error.
+ */
+- (void)configureWithSmartDictionary:(NSDictionary *)smartDict remoteLogger:(nullable id<SCSRemoteConfigurationErrorRemoteLogger>)logger;
+
+/**
+ Configure the SCSConfiguration instance using dictionary fetched from the remote config manager.
+ 
+ @param smartDict The Smart AdServer config dictionary.
+ @param logger The logger to use in case of error.
+ @param frameworkDatabaseVersionID The framework database version ID (as a String) if the SDK must be checked for obsolescence, nil otherwise.
+ */
+- (void)configureWithSmartDictionary:(NSDictionary *)smartDict
+                        remoteLogger:(nullable id<SCSRemoteConfigurationErrorRemoteLogger>)logger
+          frameworkDatabaseVersionID:(nullable NSString *)frameworkDatabaseVersionID;
 
 /**
  Schedule a remote configuration fetching retry if necessary (depending on the provided error if any).

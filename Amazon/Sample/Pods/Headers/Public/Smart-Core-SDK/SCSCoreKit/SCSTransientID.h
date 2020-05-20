@@ -1,1 +1,0 @@
-../../../../Smart-Core-SDK/SCSCoreKit.framework/Headers/SCSTransientID.h
